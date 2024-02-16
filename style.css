@@ -1,4 +1,8 @@
 body, html{
 width: 100%;
-font-family: Fredoka;
+font-family: Montserrat;
+}
+
+h1{
+font-size: 30px;
 }
