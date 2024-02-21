@@ -4,7 +4,8 @@
     width: 100%;
     font-family: Montserrat;
     }
-  
+     
+
     .menucontainer{
     width: 100%;
     background-color: rgba(6,6,68, 0.9);
@@ -36,18 +37,12 @@
     font-size: 30px;
     }
     
-    .menu{
-    width: 700px;
-    position: absolute;
-    right: 0px;
-    top: 30px;
-    }
     
     .podstranky-menu{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-right: 30px;
+    margin-left: 40px;
     }
 
     .odkazmenu:hover{
@@ -70,5 +65,18 @@
     left: 0%;   
     }
 
-  
- 
+    @media screen and (min-width: 1000px) {
+        .menu-pc{
+        display: flex;
+        width: 700px;
+        position: absolute;
+        right: 0px;
+        top: 30px;
+        }
+       }
+    
+       @media screen and (max-width: 999px) {
+        .menu-pc{
+        display: none;
+        }
+       } 
