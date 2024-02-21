@@ -1,26 +1,73 @@
-body, html{
+    
+
+    body, html{
     width: 100%;
     font-family: Montserrat;
     }
-    
+  
+    .menucontainer{
+    width: 100%;
+    background-color: rgba(6,6,68, 0.9);
+    height: 80px;
+    display: flex;
+    position: absolute;
+    top: 0px;  
+    left: 0px;
+    }
+
+    #pozadi-top{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    z-index: -5;
+    top: 0px;
+    left: 0px;
+    }
+
+    .odkazmenu{
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        margin-left: 50px;
+    }
+
     h1{
     font-size: 30px;
     }
+    
     .menu{
-    width: 400px;
+    width: 700px;
     position: absolute;
-    right: 50px;
+    right: 0px;
     top: 30px;
     }
+    
     .podstranky-menu{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 400px;
-    overflow: hiden;
+    margin-right: 30px;
     }
+
+    .odkazmenu:hover{
+    color: rgb(144, 144, 144);
+    }
+    
     #logo{
+    display: flex;
+    position: absolute;
+    z-index: 5000;
     width: 400px;
+    top: -160px;
     }
+
+    #fixmenu{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    z-index: 1000; 
+    left: 0%;   
+    }
+
   
  
