@@ -1,82 +1,60 @@
     
 
     body, html{
-    width: 100%;
-    font-family: Montserrat;
-    }
-     
-
-    .menucontainer{
-    width: 100%;
-    background-color: rgba(6,6,68, 0.9);
-    height: 80px;
-    display: flex;
-    position: absolute;
-    top: 0px;  
-    left: 0px;
-    }
-
-    #pozadi-top{
-    width: 100%;
-    display: flex;
-    position: absolute;
-    z-index: -5;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    }
-
-    .odkazmenu{
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-        margin-left: 50px;
-    }
-
-    h1{
-    font-size: 30px;
-    }
+        width: 100%;
+        font-family: Montserrat;
+        margin: 0;
+        padding: 0;
+        }
+         
+        #pozadi-top{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        }
     
-    
-    .podstranky-menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-left: 40px;
-    }
 
-    .odkazmenu:hover{
-    color: rgb(144, 144, 144);
-    }
-    
-    #logo{
-    display: flex;
-    position: absolute;
-    z-index: 5000;
-    width: 400px;
-    top: -160px;
-    }
+        #fixmenu{
+        width: 100%;
+        background-color: rgba(6,6,68, 0.9);
+        height: 80px;
+        position: fixed;
+        top: 0px;  
+        }  
 
-    #fixmenu{
-    position: fixed;
-    top: 0%;
-    width: 100%;
-    z-index: 1000; 
-    left: 0%;   
-    }
-
-    @media screen and (min-width: 1000px) {
-        .menu-pc{
+        #logo{
+            display: flex;
+            position: relative;
+            z-index: 5000;
+            width: 400px;
+            top: -160px;
+            }
+        
+        .menu-pc, .odkazmenu {
         display: flex;
-        width: 700px;
-        position: absolute;
-        right: 0px;
-        top: 30px;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 500px;
         }
-       }
-    
-       @media screen and (max-width: 999px) {
-        .menu-pc{
-        display: none;
+
+        a{
+        list-style-type: none;
+        color: white;
+        
         }
-       } 
+
+        .odkazmenu:hover{
+        color: rgb(144, 144, 144);
+        }
+        
+
+                  
+        @media screen and (min-width: 1000px) {
+        
+            }
+           }
+        
+           @media screen and (max-width: 999px) {
+        
+        }
+           } 
