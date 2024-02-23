@@ -1,60 +1,87 @@
     
-
-    body, html{
-        width: 100%;
+*{
+border: 2px solid black;
+}
+   
+   body, html{
+        width: 100vw;
         font-family: Montserrat;
         margin: 0;
         padding: 0;
         }
          
-        #pozadi-top{
-        width: 100%;
-        padding: 0;
-        margin: 0;
+    #pozadi-top{
+        width: 100vw;
+        height: auto;
+        padding: 0px;
+        margin: 0px;
+        position: absolute;
+        left: 0;
         }
-    
-
+        
+        
         #fixmenu{
-        width: 100%;
+        width: 100vw;
         background-color: rgba(6,6,68, 0.9);
         height: 80px;
         position: fixed;
-        top: 0px;  
+        top: 0;
+        left: 0;
         }  
+
+        #navigation{
+        display: flex;
+        justify-content: end;
+        top: 0;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 80px;
+        }
+ 
+
+
+         @media  screen and (min-width: 950px) {
+            #menu-pc{
+                display: flex;
+                list-style-type: none;
+                align-items: center;
+                width: 550px;
+                justify-content: space-between;
+                padding: 0px 20px;
+                height: 100%;
+                }   
+            #menu-mobile{
+                display: none;
+            }            
+         }   
+
+         @media screen and (max-width: 949px) {
+            #menu-pc{
+            display: none;}            
+         }   
+
 
         #logo{
             display: flex;
             position: relative;
             z-index: 5000;
             width: 400px;
-            top: -160px;
+            top: -80px;
+            object-fit: cover;
+            height: 200px;
             }
         
-        .menu-pc, .odkazmenu {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 500px;
-        }
-
-        a{
-        list-style-type: none;
+        .odkazmenu a{
         color: white;
-        
+        text-decoration: none;
+        font-size: 20px;
         }
 
-        .odkazmenu:hover{
+        .odkazmenu a:hover{
         color: rgb(144, 144, 144);
         }
         
 
-                  
-        @media screen and (min-width: 1000px) {
-        
-            }
-           }
-        
-           @media screen and (max-width: 999px) {
-        
-        }
-           } 
+
+                
