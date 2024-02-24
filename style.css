@@ -1,12 +1,15 @@
-    
+
+//*
 *{
-border: 2px solid black;
+border: 1px solid black;
 }
+*//
+
    
    body, html{
         width: 100vw;
         font-family: Montserrat;
-        margin: 0;
+        margin: 0 auto;
         padding: 0;
         }
          
@@ -17,11 +20,13 @@ border: 2px solid black;
         margin: 0px;
         position: absolute;
         left: 0;
+        top: 0;
         }
         
         
         #fixmenu{
         width: 100vw;
+        background-color: ;
         background-color: rgba(6,6,68, 0.9);
         height: 80px;
         position: fixed;
@@ -40,7 +45,6 @@ border: 2px solid black;
         }
  
 
-
          @media  screen and (min-width: 950px) {
             #menu-pc{
                 display: flex;
@@ -50,27 +54,99 @@ border: 2px solid black;
                 justify-content: space-between;
                 padding: 0px 20px;
                 height: 100%;
-                }   
+                }
+            #center-logo-pc{
+                display: flex;
+                position: fixed;
+                top: 0;
+            }
+            #logo-pc{
+                display: flex;
+                position: relative;
+                z-index: 5000;
+                width: 400px;              
+                object-fit: cover;
+                height: 100%;
+                }
+                a #logo-pc{
+                    height: 80px;
+                    position: relative;
+                    top: 0;    
+                }
+            #logo-mobile{
+                display: none;
+                }               
             #menu-mobile{
                 display: none;
-            }            
-         }   
-
-         @media screen and (max-width: 949px) {
-            #menu-pc{
-            display: none;}            
-         }   
-
-
-        #logo{
-            display: flex;
-            position: relative;
-            z-index: 5000;
-            width: 400px;
-            top: -80px;
-            object-fit: cover;
-            height: 200px;
+                }            
+            #menu-mobile-ikona{
+                display: none;
             }
+            #menu-mobile-button-container{
+                display: none;              
+            } 
+            }   
+
+        
+        
+        
+            @media screen and (max-width: 949px) {         
+            #menu-mobile-button-container{
+                display: absolute;
+                margin-top: 120px;  
+                justify-content: center;              
+            } 
+            #menu-mobile-button{
+                background-color: rgba(6,6,68, 0.9);
+                color: white;
+                padding: 10px;
+                border: none;
+            } 
+            #menu-mobile-button:hover{
+                background-color: rgba(33, 33, 33, 0.9);
+            }
+            #center-menu-mobile{
+                display: flex;
+                width: 100vw;
+                justify-content: center;
+            }
+            #center-logo-mobile{
+                display: flex;
+                position: fixed;
+                width: 100vw;
+                justify-content: center;
+                top: 0;
+            }
+            #logo-mobile{
+                display: flex;
+                position: relative;
+                z-index: 5000;
+                width: 300px;              
+                object-fit: cover;
+                height: 100%;
+            }
+            a #logo-mobile{
+                height: 80px;
+                position: relative;
+                top: 0;    
+            }
+            #menu-pc{
+                display: none;
+            }
+            #logo-pc{
+                display: none;
+            }  
+            #menu-mobile{
+                display: none;
+                margin: 0;
+                padding: 0;
+                left: 0px;
+
+                background-color: rgba(6,6,68, 0.9);
+                
+            }
+            }
+
         
         .odkazmenu a{
         color: white;
@@ -81,6 +157,8 @@ border: 2px solid black;
         .odkazmenu a:hover{
         color: rgb(144, 144, 144);
         }
+
+
         
 
 
