@@ -92,7 +92,7 @@ border: 1px solid black;
             #logo-mobile{
                 display: none;
                 }               
-            #menu-mobile{
+            ul #menu-mobile{
                 display: none;
                 }            
             #menu-mobile-ikona{
@@ -101,6 +101,9 @@ border: 1px solid black;
             #menu-mobile-button-container{
                 display: none;              
             } 
+            #center-menu-mobile{
+                display: none;
+            }
             }   
 
         
