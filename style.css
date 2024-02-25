@@ -12,9 +12,24 @@ border: 1px solid black;
         margin: 0 auto;
         padding: 0;
         }
-         
-    #pozadi-top{
+    
+    #top{ 
+        background-image: url("https://raw.githubusercontent.com/deriverge/erikacagankova/main/main-foto.jpg");
+        background-size: cover;
+        background-position: center;
         width: 100vw;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+         
+  
+    #pozadi-top{
+        display: none;
+        width: 100%;
         height: auto;
         padding: 0px;
         margin: 0px;
@@ -22,6 +37,7 @@ border: 1px solid black;
         left: 0;
         top: 0;
         }
+        
         
         
         #fixmenu{
