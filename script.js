@@ -1,4 +1,4 @@
-
+// MENU button,meni barvy pro telefon
 function menuClicked(){
 const menuButton = document.getElementById("menu-mobile-button");
 if (menuButton.innerText === "Zobrazit menu"){
@@ -29,3 +29,4 @@ showMobileMenu.style.display = "none";
 showMobileMenu.style.display = "flex";
 }
 }
+//KONEC MENU button funkce barev
