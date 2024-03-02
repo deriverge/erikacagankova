@@ -10,7 +10,7 @@ border: 1px solid black;
    
 body, html{
     width: 100%;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     margin: 0px;
     padding: 0px;
     }
@@ -132,19 +132,28 @@ body, html{
             
          }
          footer#footer{
-            display: block;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
             position: relative;
             z-index: 2;
-            width: 100vw;
+            width: 100%;
             background-color: #555;
             background-color: rgba(50, 50, 50, 0.833);
             height: 400px;
-            bottom: 0px;
-            left: 0;
             color: aliceblue;
         }
-    
-           }
+     span#copyright, a#deriverge{
+            display: flex;
+            position: absolute;
+            bottom: 1px;
+            flex-direction: column;
+            color: aliceblue;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-right: 40px;
+        }
+        }
         /* Konec - responzivita pro PC */   
 
     
@@ -237,7 +246,7 @@ body, html{
             display: block;
             position: fixed;
             bottom: 0px;
-            height: 600px;
+            height: 830px;
             width: auto;
             z-index: -10;
         }
@@ -263,24 +272,36 @@ body, html{
             display: flex;
             position: absolute;
             z-index: 3;
-            margin-left: 10px;
             line-height: 40px;
-            margin-top: 200px;
+            margin-top: 170px;
+            flex-direction: column;
             
          }        
          footer#footer{
-            display: block;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
             position: relative;
             z-index: 2;
-            width: 100vw;
+            width: 100%;
             background-color: #555;
             background-color: rgba(50, 50, 50, 0.833);
-            height: 700px;
-            bottom: 0px;
-            left: 0;
+            height: 800px;
             color: aliceblue;
+            bottom: 0;
         }
-    
+        span#copyright, #deriverge{
+            display: flex;
+            position: absolute;
+            bottom: 10px;            
+            flex-direction: column;
+            color: aliceblue;
+            align-items: center;
+            
+        }
+        #deriverge{
+            margin-bottom: -30px;
+        }
         }    
     /* Konec - responzivita pro Telefon */
     
@@ -297,6 +318,10 @@ body, html{
     font-size: 20px;
     }
 
+    .edit-text{
+        color: #fff;
+        font-size: 20px;
+    }
 
     .odkazmenu a:hover{
         outline: solid #fff 1px;
@@ -312,7 +337,7 @@ body, html{
     }
 
     .phone-ikon img{
-    margin-top: 5px;
+    margin-top: 8px;
     }
 
 
@@ -331,24 +356,41 @@ body, html{
         background-color: white;
     }
 
-    #copyright{
-        position: absolute;
-        right: 20px;
-        bottom: 20px;     
-        text-decoration: none;   
-        color: aliceblue;
-    }
-
-    .nadpis-footer{
+  
+    .navigace-footer{
         color: #fff;
         font-size: 25px;
-        border-bottom: 1px solid #fff;
         font-weight: 500;
     }
 
-    #deriverge{
+    .kontakty-footer{
+        color: #fff;
+        font-size: 25px;
+        font-weight: 500;
+      }
+
+    .kontakty-footer::after{
+        content: '';
+        display: flex;
+        position: relative;
+        margin: 0px;
+        height: 2px;
+        width: 90px;
+        background-color: #fff;
+    }
+
+    .navigace-footer::after{
+        content: '';
+        display: flex;
+        position: relative;
+        margin: 0px;
+        height: 2px;
+        width: 90px;
+        background-color: #fff;
+    }
         
-        color: aliceblue;
+    #kontakty-footer-ul{
+        list-style-type: none;        
     }
     
 
