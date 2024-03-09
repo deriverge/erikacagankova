@@ -151,14 +151,32 @@ body, html{
           right: 30px;
           bottom: 1;
           margin-top: 60px;
-          background-color: rgba(70, 70, 70, 0.9);
+          background-color: rgba(6,6,68, 0.9);
           color: #fff;
           height: 290px;
           justify-content: center;
           align-items: center;
           width: 470px;
+          padding-bottom: 5px;
+          border-radius: 4px;
         } 
 
+        #poptavkovy-formular-top{
+            display: flex;
+            position: absolute;
+            z-index: 3;
+            right: 30px;
+            top: 150px;
+            background-color: rgba(6,6,68, 0.9);
+            color: #fff;
+            height: 290px;
+            justify-content: center;
+            align-items: center;
+            width: 470px;
+            padding-bottom: 5px;
+            border-radius: 4px;
+        }
+    
 
         }
         /* Konec - responzivita pro PC */   
@@ -312,6 +330,9 @@ body, html{
             align-items: center;
             max-width: 100vw;
           } 
+          #poptavkovy-formular-top{
+            display: none;
+          }
   
         }    
     /* Konec - responzivita pro Telefon */
@@ -426,20 +447,6 @@ body, html{
         
     #kontakty-footer-ul{
         list-style-type: none;        
-    }
-
-    #poptavkovy-formular-top{
-        display: flex;
-        position: absolute;
-        z-index: 3;
-        right: 30px;
-        top: 10px;
-        background-color: rgba(70, 70, 70, 0.9);
-        color: #fff;
-        height: 290px;
-        justify-content: center;
-        align-items: center;
-        width: 470px;
     }
 
     #center-button-form{
