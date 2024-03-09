@@ -1,178 +1,570 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Reality | Erika Čagánková</title>
-    <meta name="description" content="Budu Váš spolehlivý partner ve světě ralit. Profesionální služby s osobním přístupem a důrazem na kvalitu.">
-    <link rel="stylesheet" href="style.css">
+//*
+*{
+outline: 1px solid rgb(0, 0, 0);
+}
+*//
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
-</head>
 
-<body>
-<!--zacatek menu-->
-<div id="top">
-</div>
 
-<div id="fixmenu">
-  
-    <div id="center-logo-pc">   
-      <a href="https://www.erikacagankova.cz/"><img id="logo-pc" src="https://raw.githubusercontent.com/deriverge/erikacagankova/main/pictures/logo-erika-cagankova.png"></a>
-    </div>
-      
-    <div id="center-logo-mobile">
-        <a href="https://www.erikacagankova.cz/"><img id="logo-mobile" src="https://raw.githubusercontent.com/deriverge/erikacagankova/main/pictures/logo-erika-cagankova.png"></a>
-    </div>  
+   
+body, html{
+    width: 100%;
+    font-family: Montserrat, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    -webkit-font-smoothing: antialiased;
+    }
+button:hover{
+    cursor: pointer;
+}
+
+#top{ 
+    display: block;
+    background-image: url("https://raw.githubusercontent.com/deriverge/erikacagankova/main/pictures/main-foto.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 800px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    left: 0;
+    top: 0;
+    }
+          
     
-        <nav id="navigation">
-          <ul id="menu-pc">
-            <li class="odkazmenu"><a href="#sluzby">Služby</a></li>
-            <li class="odkazmenu"><a href="#omne">O mně</a></li>
-            <li class="odkazmenu"><a href="#nemovitosti">Nemovitosti</a></li>
-            <li class="odkazmenu"><a href="#reference">Reference</a></li>
-            <li class="odkazmenu"><a href="#blog">Blog</a></li>
-          </ul>
+    #fixmenu{
+    display: flex;
+    width: 100vw;
+    background-color: rgba(6,6,68, 0.9);
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    }  
+
+
+
+    /* Responzivita pro PC */
+     @media  screen and (min-width: 1324px) {
+        body, html{
+            width: 100%;
+            font-family: Montserrat;
+            margin: 0px;
+            padding: 0px;
+            } 
+        #menu-pc{
+            display: flex;
+            list-style-type: none;
+            align-items: center;
+            width: 550px;
+            justify-content: space-between;
+            padding: 0px 20px;
+            height: 100%;
+            }
+         #navigation{
+            display: flex;
+            justify-content: end;
+            top: 0;    
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            height: 80px;
+            }
+
+        #center-logo-pc{
+            display: flex !important;
+            top: 0;
+            height: 80px;
+        a{
+            width: 400px;
+            height: 80px;
+            z-index: 10;
+        }
+        }
+        #logo-pc{
+            width: 400px;              
+            object-fit: cover;
+            height: 80px;
+            position: absolute;
+        }   
         
-          <div id="center-menu-mobile">
+        #logo-mobile, #center-logo-mobile{
+            display: none;
+            }               
+        ul #menu-mobile{
+            display: none;
+            }            
+        #menu-mobile-ikona{
+            display: none;
+        }
+        #menu-mobile-button-container{
+            display: none;              
+        } 
+        #center-menu-mobile{
+            display: none;
+        }
+        #domy-footer{
+            display: block;
+            position: fixed;
+            bottom: 0px;
+            height: auto;
+            width: 100vw;
+            z-index: -10;
+        }
+        #logo-footer-container{
+            display: flex;
+            position: absolute;
+            width: 200px;
+            justify-content: center;
+            align-items: center;
+            z-index: 11;
+            margin-top: 60px;
+        }
+        .logo-footer{
+            width: 100%;
+         }
+         #navigace-footer-container {
+            display: flex;
+            position: absolute;
+            z-index: 3;
+            margin-left: 200px;
+            line-height: 40px;
+            margin-top: 60px;
+            
+         }
+         footer#footer{
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            background-color: #555;
+            background-color: rgba(50, 50, 50, 0.833);
+            height: 400px;
+            color: aliceblue;
+        }
         
-            <div id="menu-mobile-button-container">
-              <button onclick="menuClicked(); menuButtonClicked(); showMobileMenu()" id="menu-mobile-button">Zobrazit menu</button>
-            </div>   
-            
-            
-            <ul id="menu-mobile">
-              <li class="odkazmenu"><a href="#sluzby">Služby</a></li>
-              <li class="odkazmenu"><a href="#reference">Reference</a></li>
-              <li class="odkazmenu"><a href="#nemovitosti">Nemovitosti</a></li>
-              <li class="odkazmenu"><a href="#blog">Blog</a></li>
-              <li class="odkazmenu"><a href="#omne">O mně</a></li>
-              <li class="phone-ikon"><img id="logo-phone" src="https://raw.githubusercontent.com/deriverge/erikacagankova/main/pictures/phonelogo.png"></li>  
-              <li class="phone-menu"><a href="tel:+420773576543">+420 773 576 543</a></li>
-              <li class="phone-ikon"><img id="logo-phone" src="https://raw.githubusercontent.com/deriverge/erikacagankova/main/pictures/email-logo.png"></li>
-              <li class="phone-menu odkazmenu"><a href="mailto:reality@erikacagankova.cz">reality@erikacagankova.cz</a></li>            
-            </ul>     
-            
-          </div>
+         #poptavkovy-formular-footer{
+          display: flex;
+          position: absolute;
+          z-index: 3;
+          right: 100px;
+          bottom: 1;
+          margin-top: 60px;
+          background-color: rgba(6,6,68, 0.9);
+          color: #fff;
+          height: 290px;
+          justify-content: center;
+          align-items: center;
+          width: 470px;
+          padding-bottom: 5px;
+          border-radius: 4px;
+        } 
+
+        #poptavkovy-formular-top{
+            display: flex;
+            position: absolute;
+            z-index: 3;
+            right: 30px;
+            top: 150px;
+            background-color: rgba(6,6,68, 0.9);
+            color: #fff;
+            height: 290px;
+            justify-content: center;
+            align-items: center;
+            width: 470px;
+            padding-bottom: 5px;
+            border-radius: 4px;
+        }
+    
+        #nadpis-main{
+            display: flex;
+            position: absolute;
+            top: 220px;
+            color: #000;
+            font-size: 40px;
+            margin-left: 70px;
+            text-decoration-line: overline;
+            background-color: #ffffff6a;
+            padding: 30px 30px 15px 30px;
+        }
+
+        #justifyContent{
+            display: none;
+        }
         
-        </nav>
-</div>
-<!--konec menu-->
+        }
+        /* Konec - responzivita pro PC */   
 
-<!--nadpis-->
-<div id="justifyContent">
-<h1 id="nadpis-main-mobile">Vaše rodinná<br> realitní makléřka...</h1>
-</div>
-<h1 id="nadpis-main">Vaše rodinná realitní makléřka...</h1>
-<!--konec nadpis-->
+       
+    
+    
+        /* Responzivita pro Telefon */
+        @media screen and (max-width: 1323px) {     
+            body, html{
+                width: 100%;
+                font-family: Montserrat;
+                margin: 0px;
+                padding: 0px;
+                }    
+        #menu-mobile-button-container{
+            display: flex;
+            margin-top: -13px;
+            position: absolute; 
+            height: 30px;
+            width: 180px;
+            justify-content: center;
+        } 
+        #navigation{
+            display: flex;
+            justify-content: center;
+            top: 80px;
+            align-items: center;
+            position: fixed;
+            width: 100vw;
+            }
+            
+        #menu-mobile-button{
+            width: 180px;
+            color: white;
+            background-color: rgba(6,6,68, 0.9);
+            border: none;
+            font-size: 15px;
+            font-weight: bold;
+        } 
+        #menu-mobile-button:hover{
+        background-color: rgba(0,0,0, 0);
+        }
+        #center-menu-mobile{
+            display: flex;
+            width: 100vw;
+            justify-content: center;
+            margin-top: 16px;
+        }
+        #center-logo-mobile{
+            display: flex !important;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            width: 100vw;
+            justify-content: center;
+            top: 0;
+            height: 80px;
+        }
+        #logo-mobile{
+            width: 300px;              
+            object-fit: cover;
+            height: 80px;
+            position: absolute;
+        }
+        a{
+            z-index: 50;
+            width: 300px;
+            height: 80px;
+        } 
+        #menu-pc{
+            display: none;
+        }
+        #logo-pc{
+            display: none;
+        } 
 
-<!--Zacatek prvniho odstavce-->
-<div class="odstavec-container-full-width">
-  <div class="odstavec-container">
-    <p>
-      Svým klientům přináším nejen špičkové služby v oblasti koupě, prodeje či pronájmu nemovitostí, ale také pocit bezpečí a důvěry.
-      Zakládám si na transparentnosti komunikace, díky čemuž se můžete spolehnout, že budete o každém kroku vašeho realitního procesu perfektně informováni. Má práce je pro mě vášní a každý nový projekt přijímám s nadšením ale i respektem. Mým cílem najít to nejlepší řešení pro vás.
-      <br><br>
-      Ať už hledáte nový domov pro vaši rodinu, chcete prodat svou nemovitost za nejlepších podmínek nebo hledáte investiční příležitost, jsem zde, abych vám pomohla vaše sny proměnit ve skutečnost. Díky mé hluboké znalosti trhu, odbornosti a vřelému přístupu se stanu vaší osobní makléřkou a důvěryhodnou partnerkou na cestě za vašimi sny.
-      Pokud hledáte makléřku, která stojí pevně na zemi, je připravena naslouchat vašim potřebám a která působí s láskou a zanícením pro realitní trh, neváhejte se mi ozvat. Společně najdeme cestu k vašemu novému domovu nebo úspěšnému prodeji vaší nemovitosti.
-    </p>
-  </div>
-</div>
-<!--konec prvni odstavec-->
+        #center-logo-pc{
+            display: none;
+        }
+        #menu-mobile{
+            display: none;
+            position: absolute;
+            width: 100vw;
+            margin-top: 20px;
+            background-color: rgba(6,6,68, 0.9);
+            flex-direction: column;
+            line-height: 35px;
+            list-style-type: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        #domy-footer{
+            display: block;
+            position: fixed;
+            bottom: 0px;
+            height: 830px;
+            width: auto;
+            z-index: -10;
+        }
+        #center-logo-footer-container{
+            display: flex;
+            justify-content: center;
+        }
+        #logo-footer-container{
+            display: flex;
+            position: absolute;
+            width: 230px;
+            height: 230px;
+            margin-top: 0px; 
+        }
+        .logo-footer{
+            object-fit: cover;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+        }
+        #navigace-footer-container {
+            display: flex;
+            position: absolute;
+            z-index: 3;
+            line-height: 40px;
+            margin-top: 530px;
+            flex-direction: column;
+            
+         }        
+         footer#footer{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            background-color: #555;
+            background-color: rgba(50, 50, 50, 0.833);
+            height: 1100px;
+            color: aliceblue;
+            bottom: 0;
+        }
+        #poptavkovy-formular-footer{
+            display: flex;
+            position: absolute;
+            z-index: 3;
+            padding: 15px 10px;
+            margin-top: 190px;
+            background-color: rgba(6,6,68, 0.7);
+            color: #fff;
+            height: 290px;
+            justify-content: center;
+            align-items: center;
+            max-width: 100vw;
+            padding-bottom: 25px;
+          } 
+          #poptavkovy-formular-top{
+            display: none;
+          }
 
-<div id="center-logo-footer-container">
-<div id="logo-footer-container">   
-  <a class="logo-footer" href="https://www.erikacagankova.cz/"><img class="logo-footer" src="https://raw.githubusercontent.com/deriverge/erikacagankova/main/pictures/logo-erika-cagankova.png"></a>
-</div>
-</div>
+          #justifyContent{
+            justify-content: center;
+            display: flex;
+            width: 100vw;
+            background-color: #ffffffa3;
+            position: absolute;
+            top: 220px;
+            position: absolute;
+            padding: 30px 0 15px 0;
+            }
+        
+          #nadpis-main-mobile{
+            display: flex;
+            color: #000;
+            font-size: 35px;
+            text-decoration-line: overline;
+            margin: 0;
+            padding: 0;
+        }
+    
+        #nadpis-main{
+            display: none;
+        }
+  
+        }    
+    /* Konec - responzivita pro Telefon */
+    
+    #footer-copyright-center{
+        display: flex;
+        position: absolute;
+        width: 100vw;
+        left: 0;
+        bottom: 65px;
+        justify-content: center;        
+    }
+   
+    span#copyright{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        color: aliceblue;
+        align-items: center;
+    }
+   
+    #deriverge{
+        color: #fff;
+        margin-bottom: 5px;
+        height: auto;
+        width: auto;
+    }
+ 
 
-<!-- poptavkovy formular top -->
-<div id="poptavkovy-formular-top">
-  <form id="form"
-  action="https://formspree.io/f/mdoqzvoz"
-  method="POST"
-  >
-  <label>
-    <span id="nadpis-formular">Řešíte prodej nebo pronájem nemovitosti? <br>Napište mi o co se jedná.</span><br>
-    <textarea name="message" required placeholder="Dobrý den, chci prodat nemovitost v..."></textarea>
-    <br><br>
-  </label>
-  <div id="center-button-form">
-  <label>
-    <span class="edit-text">Váš email:</span><br>
-    <input type="email" name="email" required placeholder="novakovi@seznam.cz">
-  </label>
-  <button id="button-formular" type="submit">Odeslat</button>
-  </div>
-  </form>
-  </div>
-  <!-- konec poptavkovy formular top-->
+    #logo-phone{
+    width: 25px;
+    position: absolute;
+    padding-right: 10px;
+    margin-top: px;
+    }
+
+    .odkazmenu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    }
+
+    .edit-text{
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .odkazmenu a:hover{
+        outline: solid #fff 1px;
+        outline-offset: 5px;
+    }
+    
+
+    .phone-menu a{
+        color: white;
+        text-decoration: none;
+        font-size: 20px;   
+        margin-left: 35px;       
+    }
+
+    .phone-ikon img{
+    margin-top: 8px;
+    }
+
+    .odstavec-container-full-width{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        background-color: #fff;
+    }
+
+    .odstavec-container{
+        background-color: inherit;
+        padding: 30px 0;
+        max-width: 1300px;
+    }
+
+    p{
+        padding: 0 20px; 
+        margin: 0;
+        display: flex;
+        letter-spacing: +1px;
+        line-height: +24px;
+        flex-wrap: nowrap;      
+        max-width: 100vw;
+        z-index: 3;
+        background-color: white;
+    }
 
   
+    .navigace-footer{
+        color: #fff;
+        font-size: 25px;
+        font-weight: 500;
+    }
 
-<img id="domy-footer" src="https://raw.githubusercontent.com/deriverge/erikacagankova/main/pictures/background-domy.jpg" alt=""> 
+    .kontakty-footer{
+        color: #fff;
+        font-size: 25px;
+        font-weight: 500;
+      }
 
-<footer id="navigace-footer-container">
-  <ul id="menu-footer"><span class="navigace-footer">Navigace</span>
-    <li class="odkazmenu"><a href="#sluzby">Služby</a></li>
-    <li class="odkazmenu"><a href="#omne">O mně</a></li>
-    <li class="odkazmenu"><a href="#nemovitosti">Nemovitosti</a></li>
-    <li class="odkazmenu"><a href="#reference">Reference</a></li>
-    <li class="odkazmenu"><a href="#blog">Blog</a></li>
-  </ul>
-  <ul id="kontakty-footer-ul"><span class="kontakty-footer">Kontakty</span>
-    <span class="edit-text">Erika Čagánková</span>
-    <li class="phone-ikon"><img id="logo-phone" src="https://raw.githubusercontent.com/deriverge/erikacagankova/main/pictures/phonelogo.png"></li>
-    <li class="phone-menu odkazmenu"><a href="tel:+420773576543">+420 773 576 543</a></li>
-    <li class="phone-ikon"><img id="logo-phone" src="https://raw.githubusercontent.com/deriverge/erikacagankova/main/pictures/email-logo.png"></li>
-    <li class="phone-menu odkazmenu"><a href="mailto:reality@erikacagankova.cz">reality@erikacagankova.cz</a></li>
-  </ul>
-</footer>
+    .kontakty-footer::after{
+        content: '';
+        display: flex;
+        position: relative;
+        margin: 0px;
+        height: 2px;
+        width: 90px;
+        background-color: #fff;
+    }
 
+    .navigace-footer::after{
+        content: '';
+        display: flex;
+        position: relative;
+        margin: 0px;
+        height: 2px;
+        width: 90px;
+        background-color: #fff;
+    }
+        
+    #kontakty-footer-ul{
+        list-style-type: none;        
+    }
 
+    #center-button-form{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
 
-<footer id="footer">
-  <div id="footer-copyright-center">
-  <span id="copyright">
-    <a id="deriverge" href="https://www.deriverge.com/">www.deriverge.com</a>
-    page by deriverge s.r.o.
-    &copy;2024
-  </span>
-</div>
+    input, textarea, #button-formul{
+        touch-action: none;
+        pinch-zoom: none;
+    }
 
-<!-- poptavkovy formular footer -->
-<div id="poptavkovy-formular-footer">
-  <form id="form"
-  action="https://formspree.io/f/mdoqzvoz"
-  method="POST"
-  >
-  <label>
-    <span id="nadpis-formular">Řešíte prodej nebo pronájem nemovitosti? <br>Napište mi o co se jedná.</span><br>
-    <textarea name="message" required placeholder="Dobrý den, chci prodat nemovitost v..."></textarea>
-    <br><br>
-  </label>
-  <div id="center-button-form">
-  <label>
-    <span class="edit-text">Váš email:</span><br>
-    <input type="email" name="email" required placeholder="novakovi@seznam.cz">
-  </label>
-  <button id="button-formular" type="submit">Odeslat</button>
-  </div>
-  </form>
-  </div>
-  <!-- konec poptavkovy formular footer-->
+    textarea{
+        height: 90px;
+        width: 100%;
+        overflow: scroll;
+        resize: none;
+        margin: 0;
+        padding: 0;
+    }
 
+    input{
+        height: 35px;
+        width: 250px;
+        margin: 0;
+        padding: 0;
+    }
 
-</footer>
+    #nadpis-formular{
+        font-size: 20px;
+        line-height: 40px;
+    }
+    
+    #button-formular{
+        width: 100px;
+        height: 39px;
+        font-size: 20px;
+        padding: 0;
+        border-radius: 4px;
+        color: #000000;
+        background-color: #fff;
+        text-align: center;
+    }
+  
+    button#scrollTopButton{
+        width: 55px;
+        height: 55px; 
+        border-radius: 50%;
+        margin: 0;
+        border: none;
+        padding: 0;
+        display: flex;
+        position: fixed;
+        z-index: 999999;
+        right: 30px;
+        bottom: 30px;
+        justify-content: center;
+        background-color: rgba(6,6,68, 0.7);
+    }            
 
-<button id="scrollTopButton" onclick="nahoru()"><span class="scrollTopText">^</span></button>
-<script src="script.js"></script>
-</html>
-</body>
+    .scrollTopText{
+        color: #ffffff;
+        margin-top: 5px;
+        font-size: 60px;
+        font-family: 'Courier New', Courier, monospace;
+    }
