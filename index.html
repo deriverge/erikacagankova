@@ -67,19 +67,25 @@
 <!--konec menu-->
 
 <!--nadpis-->
-
+<div id="justifyContent">
+<h1 id="nadpis-main-mobile">Vaše rodinná<br> realitní makléřka...</h1>
+</div>
 <h1 id="nadpis-main">Vaše rodinná realitní makléřka...</h1>
-
 <!--konec nadpis-->
 
 <!--Zacatek prvniho odstavce-->
-<p>
-Svým klientům přináším nejen špičkové služby v oblasti koupě, prodeje či pronájmu nemovitostí, ale také pocit bezpečí a důvěry.
-Zakládám si na transparentnosti komunikace, díky čemuž se můžete spolehnout, že budete o každém kroku vašeho realitního procesu perfektně informováni. Má práce je pro mě vášní a každý nový projekt přijímám s nadšením ale i respektem. Mým cílem najít to nejlepší řešení pro vás.
-<br><br>
-Ať už hledáte nový domov pro vaši rodinu, chcete prodat svou nemovitost za nejlepších podmínek nebo hledáte investiční příležitost, jsem zde, abych vám pomohla vaše sny proměnit ve skutečnost. Díky mé hluboké znalosti trhu, odbornosti a vřelému přístupu se stanu vaší osobní makléřkou a důvěryhodnou partnerkou na cestě za vašimi sny.
-Pokud hledáte makléřku, která stojí pevně na zemi, je připravena naslouchat vašim potřebám a která působí s láskou a zanícením pro realitní trh, neváhejte se mi ozvat. Společně najdeme cestu k vašemu novému domovu nebo úspěšnému prodeji vaší nemovitosti.
-</p>
+<div class="odstavec-container-full-width">
+  <div class="odstavec-container">
+    <p>
+      Svým klientům přináším nejen špičkové služby v oblasti koupě, prodeje či pronájmu nemovitostí, ale také pocit bezpečí a důvěry.
+      Zakládám si na transparentnosti komunikace, díky čemuž se můžete spolehnout, že budete o každém kroku vašeho realitního procesu perfektně informováni. Má práce je pro mě vášní a každý nový projekt přijímám s nadšením ale i respektem. Mým cílem najít to nejlepší řešení pro vás.
+      <br><br>
+      Ať už hledáte nový domov pro vaši rodinu, chcete prodat svou nemovitost za nejlepších podmínek nebo hledáte investiční příležitost, jsem zde, abych vám pomohla vaše sny proměnit ve skutečnost. Díky mé hluboké znalosti trhu, odbornosti a vřelému přístupu se stanu vaší osobní makléřkou a důvěryhodnou partnerkou na cestě za vašimi sny.
+      Pokud hledáte makléřku, která stojí pevně na zemi, je připravena naslouchat vašim potřebám a která působí s láskou a zanícením pro realitní trh, neváhejte se mi ozvat. Společně najdeme cestu k vašemu novému domovu nebo úspěšnému prodeji vaší nemovitosti.
+    </p>
+  </div>
+</div>
+<!--konec prvni odstavec-->
 
 <div id="center-logo-footer-container">
 <div id="logo-footer-container">   
@@ -109,27 +115,6 @@ Pokud hledáte makléřku, která stojí pevně na zemi, je připravena naslouch
   </div>
   <!-- konec poptavkovy formular top-->
 
-<!-- poptavkovy formular footer -->
-<div id="poptavkovy-formular-footer">
-  <form id="form"
-  action="https://formspree.io/f/mdoqzvoz"
-  method="POST"
-  >
-  <label>
-    <span id="nadpis-formular">Řešíte prodej nebo pronájem nemovitosti? <br>Napište mi o co se jedná.</span><br>
-    <textarea name="message" required placeholder="Dobrý den, chci prodat nemovitost v..."></textarea>
-    <br><br>
-  </label>
-  <div id="center-button-form">
-  <label>
-    <span class="edit-text">Váš email:</span><br>
-    <input type="email" name="email" required placeholder="novakovi@seznam.cz">
-  </label>
-  <button id="button-formular" type="submit">Odeslat</button>
-  </div>
-  </form>
-  </div>
-  <!-- konec poptavkovy formular footer-->
   
 
 <img id="domy-footer" src="https://raw.githubusercontent.com/deriverge/erikacagankova/main/pictures/background-domy.jpg" alt=""> 
@@ -151,6 +136,8 @@ Pokud hledáte makléřku, která stojí pevně na zemi, je připravena naslouch
   </ul>
 </footer>
 
+
+
 <footer id="footer">
   <div id="footer-copyright-center">
   <span id="copyright">
@@ -159,8 +146,33 @@ Pokud hledáte makléřku, která stojí pevně na zemi, je připravena naslouch
     &copy;2024
   </span>
 </div>
+
+<!-- poptavkovy formular footer -->
+<div id="poptavkovy-formular-footer">
+  <form id="form"
+  action="https://formspree.io/f/mdoqzvoz"
+  method="POST"
+  >
+  <label>
+    <span id="nadpis-formular">Řešíte prodej nebo pronájem nemovitosti? <br>Napište mi o co se jedná.</span><br>
+    <textarea name="message" required placeholder="Dobrý den, chci prodat nemovitost v..."></textarea>
+    <br><br>
+  </label>
+  <div id="center-button-form">
+  <label>
+    <span class="edit-text">Váš email:</span><br>
+    <input type="email" name="email" required placeholder="novakovi@seznam.cz">
+  </label>
+  <button id="button-formular" type="submit">Odeslat</button>
+  </div>
+  </form>
+  </div>
+  <!-- konec poptavkovy formular footer-->
+
+
 </footer>
 
+<button id="scrollTopButton" onclick="nahoru()"><span class="scrollTopText">^</span></button>
 <script src="script.js"></script>
 </html>
 </body>
