@@ -30,3 +30,13 @@ showMobileMenu.style.display = "flex";
 }
 }
 //KONEC MENU button funkce barev
+
+//scroll top button start
+function nahoru() {
+    console.log("scroll top aktivovan");
+    window.scrollTo({top: 0, behavior: "smooth"});
+}
+
+
+
+//scroll top button konec
