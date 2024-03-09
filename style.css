@@ -44,7 +44,7 @@ body, html{
 
 
     /* Responzivita pro PC */
-     @media  screen and (min-width: 950px) {
+     @media  screen and (min-width: 1324px) {
         body, html{
             width: 100%;
             font-family: Montserrat;
@@ -167,7 +167,7 @@ body, html{
     
     
         /* Responzivita pro Telefon */
-        @media screen and (max-width: 949px) {     
+        @media screen and (max-width: 1323px) {     
             body, html{
                 width: 100%;
                 font-family: Montserrat;
@@ -282,7 +282,7 @@ body, html{
             position: absolute;
             z-index: 3;
             line-height: 40px;
-            margin-top: 500px;
+            margin-top: 540px;
             flex-direction: column;
             
          }        
