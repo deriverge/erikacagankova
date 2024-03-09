@@ -181,7 +181,7 @@ button:hover{
             border-radius: 4px;
         }
     
-        #nadpis-main-{
+        #nadpis-main{
             display: flex;
             position: absolute;
             top: 220px;
@@ -193,7 +193,7 @@ button:hover{
             padding: 30px 30px 15px 30px;
         }
 
-        .justify-content{
+        #justifyContent{
             display: none;
         }
         
