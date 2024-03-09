@@ -1,12 +1,12 @@
 //*
 *{
-border: 1px solid black;
+outline: 1px solid rgb(0, 0, 0);
 }
 *//
 
-*{
-    box-sizing: border-box;
-}
+
+
+
    
 body, html{
     width: 100%;
@@ -143,19 +143,27 @@ body, html{
             height: 400px;
             color: aliceblue;
         }
-     span#copyright, a#deriverge{
-            display: flex;
-            position: absolute;
-            bottom: 1px;
-            flex-direction: column;
-            color: aliceblue;
-            align-items: center;
-            margin-bottom: 20px;
-            margin-right: 40px;
-        }
+        
+         #poptavkovy-formular-footer{
+          display: flex;
+          position: absolute;
+          z-index: 3;
+          right: 30px;
+          bottom: 1;
+          margin-top: 60px;
+          background-color: rgba(70, 70, 70, 0.9);
+          color: #fff;
+          height: 290px;
+          justify-content: center;
+          align-items: center;
+          width: 470px;
+        } 
+
+
         }
         /* Konec - responzivita pro PC */   
 
+       
     
     
         /* Responzivita pro Telefon */
@@ -241,6 +249,7 @@ body, html{
             line-height: 35px;
             list-style-type: none;
             padding-top: 10px;
+            padding-bottom: 10px;
         }
         #domy-footer{
             display: block;
@@ -273,7 +282,7 @@ body, html{
             position: absolute;
             z-index: 3;
             line-height: 40px;
-            margin-top: 170px;
+            margin-top: 500px;
             flex-direction: column;
             
          }        
@@ -286,25 +295,52 @@ body, html{
             width: 100%;
             background-color: #555;
             background-color: rgba(50, 50, 50, 0.833);
-            height: 800px;
+            height: 1100px;
             color: aliceblue;
             bottom: 0;
         }
-        span#copyright, #deriverge{
+        #poptavkovy-formular-footer{
             display: flex;
             position: absolute;
-            bottom: 10px;            
-            flex-direction: column;
-            color: aliceblue;
+            z-index: 3;
+            padding: 15px 10px;
+            margin-top: 190px;
+            background-color: rgba(6,6,68, 0.7);
+            color: #fff;
+            height: 290px;
+            justify-content: center;
             align-items: center;
-            
-        }
-        #deriverge{
-            margin-bottom: -10px;
-        }
+            max-width: 100vw;
+          } 
+  
         }    
     /* Konec - responzivita pro Telefon */
     
+    #footer-copyright-center{
+        display: flex;
+        position: absolute;
+        width: 100vw;
+        left: 0;
+        bottom: 50px;
+        justify-content: center;        
+    }
+   
+    span#copyright{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        color: aliceblue;
+        align-items: center;
+    }
+   
+    #deriverge{
+        color: #fff;
+        margin-bottom: 5px;
+        height: auto;
+        width: auto;
+    }
+ 
+
     #logo-phone{
     width: 25px;
     position: absolute;
@@ -349,8 +385,7 @@ body, html{
         display: flex;
         letter-spacing: +1px;
         line-height: +24px;
-        flex-wrap: nowrap;
-        
+        flex-wrap: nowrap;      
         max-width: 100vw;
         z-index: 3;
         background-color: white;
@@ -392,6 +427,63 @@ body, html{
     #kontakty-footer-ul{
         list-style-type: none;        
     }
+
+    #poptavkovy-formular-top{
+        display: flex;
+        position: absolute;
+        z-index: 3;
+        right: 30px;
+        top: 10px;
+        background-color: rgba(70, 70, 70, 0.9);
+        color: #fff;
+        height: 290px;
+        justify-content: center;
+        align-items: center;
+        width: 470px;
+    }
+
+    #center-button-form{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    textarea{
+        height: 90px;
+        width: 100%;
+        overflow: scroll;
+        resize: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    input{
+        height: 35px;
+        width: 250px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #nadpis-formular{
+        font-size: 20px;
+        line-height: 40px;
+    }
     
+    #button-formular{
+        width: 100px;
+        height: 39px;
+        font-size: 20px;
+        padding: 0;
+    }
+
+    #nadpis-main{
+        display: flex;
+        position: absolute;
+        top: 100px;
+        color: #000;
+        font-size: 40px;
+
+    }
+
 
             
