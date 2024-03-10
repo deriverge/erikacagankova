@@ -32,11 +32,24 @@ showMobileMenu.style.display = "flex";
 //KONEC MENU button funkce barev
 
 //scroll top button start
+const scrollButton = document.getElementById("scrollTopButton");
+let setPosition = 200;
+
+window.addEventListener("scroll", function() {
+    
+    let currentPosition = window.pageYOffset || document.documentElement.scrollTop;
+    if (currentPosition > setPosition){
+        scrollButton.style.opacity = "1";
+    }
+    else{
+        scrollButton.style.opacity = "0";
+    }
+});
+
 function nahoru() {
     console.log("scroll top aktivovan");
     window.scrollTo({top: 0, behavior: "smooth"});
 }
-
 
 
 //scroll top button konec
