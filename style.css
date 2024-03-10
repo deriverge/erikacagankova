@@ -579,4 +579,5 @@ button:hover{
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
-    }
+        letter-spacing: -5px;
+   }
