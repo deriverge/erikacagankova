@@ -568,3 +568,15 @@ button:hover{
         font-size: 60px;
         font-family: 'Courier New', Courier, monospace;
     }
+
+    #prvniOdstavec::before{
+        display: flex;
+        position: relative;
+        color: #000;
+        content: " '' ";
+        font-size: 100px;
+        font-family: "Montagu Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
