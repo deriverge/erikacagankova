@@ -8,13 +8,14 @@ outline: 1px solid rgb(0, 0, 0);
 
 
    
-body, html{
+body, 
+html{
     width: 100%;
     font-family: Montserrat, sans-serif;
     margin: 0px;
     padding: 0px;
     -webkit-font-smoothing: antialiased;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
     }
 
     
@@ -128,7 +129,7 @@ button:hover{
             display: none;              
         } 
         #center-menu-mobile{
-            display: none;
+            display: none !important;
         }
         #domy-footer{
             display: block;
