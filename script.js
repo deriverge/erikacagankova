@@ -122,10 +122,10 @@ window.addEventListener("scroll", function() {
    
    if (currentScroll > lastScrollTop){
        // Scroll dolů
-       document.querySelector("#center-menu-mobile").style.margin = "2500px"; // Skryje hlavičku
+       document.querySelector("#center-menu-mobile").style.display = "none"; // Skryje hlavičku
    } else {
        // Scroll nahoru
-       document.querySelector("#center-menu-mobile").style.margin = "15px"; // Zobrazí hlavičku
+       document.querySelector("#center-menu-mobile").style.display = "flex"; // Zobrazí hlavičku
    }
    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Aktualizuje pozici posledního scrollu
 }, false);
