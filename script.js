@@ -1,4 +1,55 @@
 // MENU button,meni barvy pro telefon
+
+// Funkce pro přepínání menu
+function toggleMenu() {
+    const colorButton = document.getElementById("menu-mobile-button-container");
+    const menuMobile = document.getElementById("menu-mobile");
+    const menuButton = document.getElementById("menu-mobile-button");
+    if (menuButton.innerText === "Zobrazit menu") {
+        menuButton.innerText = "Zavřít menu";
+        menuMobile.style.display = "flex";
+        colorButton.style.backgroundColor = "rgba(6,6,68, 0.9)";
+    } else {
+        menuButton.innerText = "Zobrazit menu";
+        menuMobile.style.display = "none";
+    }
+}
+
+// Přidání posluchače událostí přímo na tlačítko menu
+document.getElementById("menu-mobile-button").addEventListener("click", function(event) {
+    toggleMenu();
+    // Zabránění bublání události
+    event.stopPropagation();
+});
+
+// Přidání globálního posluchače událostí pro zavření menu
+document.addEventListener("click", function() {
+    const menuMobile = document.getElementById("menu-mobile");
+    const menuButton = document.getElementById("menu-mobile-button");
+    if (menuMobile.style.display === "flex") {
+        menuButton.innerText = "Zobrazit menu";
+        menuMobile.style.display = "none";
+    }
+});
+
+
+/*
+function menuClicked(){
+const menuMobile = document.getElementById("menu-mobile");
+const menuButton = document.getElementById("menu-mobile-button");
+document.addEventListener("click", function(clicked));
+if (menuButton.innerText === "Zobrazit menu"){
+menuButton.textContent = "Zavřít menu";
+menuMobile.style.display = "flex";
+} else if (menuButton.innerText === "Zavřít menu" || clicked.target){
+menuButton.textContent = "Zobrazit menu";
+menuMobile.style.display = "none";
+}
+}
+*/
+
+
+/*
 function menuClicked(){
 const menuButton = document.getElementById("menu-mobile-button");
 if (menuButton.innerText === "Zobrazit menu"){
@@ -24,11 +75,20 @@ function showMobileMenu(){
 const menuButton = document.getElementById("menu-mobile-button");
 const showMobileMenu = document.getElementById("menu-mobile");
 if (menuButton.innerText === "Zobrazit menu"){
-showMobileMenu.style.display = "none";
+    showMobileMenu.style.display = "none";
 } else {
-showMobileMenu.style.display = "flex";
+    showMobileMenu.style.display = "flex";
 }
 }
+*/
+
+
+
+
+
+
+
+
 //KONEC MENU button funkce barev
 
 //scroll top button start
@@ -53,3 +113,21 @@ function nahoru() {
 
 
 //scroll top button konec
+
+//schovani button menu mobile
+let lastScrollTop = 50; // Pozice posledního scrollu
+
+window.addEventListener("scroll", function() {
+   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+   
+   if (currentScroll > lastScrollTop){
+       // Scroll dolů
+       document.querySelector("#center-menu-mobile").style.margin = "2500px"; // Skryje hlavičku
+   } else {
+       // Scroll nahoru
+       document.querySelector("#center-menu-mobile").style.margin = "15px"; // Zobrazí hlavičku
+   }
+   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Aktualizuje pozici posledního scrollu
+}, false);
+
+//konec schovani menu mobile
