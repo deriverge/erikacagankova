@@ -820,12 +820,12 @@
     color: #000;
     content: " '' ";
     font-size: 100px;
-    font-family: "Montagu Slab", serif;
     font-optical-sizing: auto;
-    font-weight: 400;
     font-style: normal;
     letter-spacing: -5px;
-  }
+    font-family: "Sorts Mill Goudy", serif;
+    font-weight: 400;
+    font-style: normal;  }
   
   #menu-footer {
     list-style-type: none;
