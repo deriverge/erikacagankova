@@ -446,6 +446,7 @@
       align-items: center;
       position: fixed;
       width: 100%;
+      padding: 0;
     }
   
     #menu-mobile-button {
@@ -477,6 +478,7 @@
       justify-content: center;
       top: 0;
       height: 80px;
+      left: 0;
     }
   
     #logo-mobile {
