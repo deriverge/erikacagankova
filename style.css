@@ -1,29 +1,36 @@
-//*
-*{
-outline: 1px solid rgb(0, 0, 0);
-}*//
-
-
-
-
-
-   
-body, 
-html{
+* {
+    outline: 1px solid rgb(0, 0, 0);
+    box-sizing: border-box;
+  }
+  
+  body, 
+  html {
     width: 100%;
     font-family: Montserrat, sans-serif;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth !important;
-    }
+    box-sizing: border-box;
+  }
+  
+  #domy-footer-container{
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
 
-    
-button:hover{
+  #maxWidthContainer {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  button:hover {
     cursor: pointer;
-}
-
-#odstavecjedna{
+  }
+  
+  #odstavecjedna {
     position: absolute;
     top: 300px;
     height: 5px;
@@ -32,11 +39,11 @@ button:hover{
     background-color: #000;
     z-index: 9999;
     visibility: hidden;
-}
-
-#top{ 
+  }
+  
+  #top { 
     display: block;
-    background-image: url("https://raw.githubusercontent.com/deriverge/erikacagankova/main/pictures/main-foto.jpg");
+    background-image: url("/icons/background-ecg.jpg");
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -46,592 +53,774 @@ button:hover{
     position: relative;
     left: 0;
     top: 0;
-    }
-    
-    .parrentsHeight {
-        max-height: 100%;
-        display: flex;
-        overflow: hidden;
-        justify-content: end;
-    }
-    
-    #me-main{
-        height: 523px;
-    }
-    
-    #fixmenu{
+  }
+  
+  .parrentsHeight {
+    max-height: 100%;
     display: flex;
-    width: 100vw;
-    background-color: rgba(6,6,68, 0.9);
+    overflow: hidden;
+    justify-content: end;
+  }
+  
+  #me-main {
+    height: 523px;
+  }
+  
+  #fixmenu {
+    display: flex;
+    width: 100%;
+    background-color: rgba(6, 6, 68, 0.9);
     height: 80px;
     position: fixed;
-    top: 0;
+    top: 30px;
     left: 0;
     z-index: 10;
-    }  
-
-
-
-    /* Responzivita pro PC */
-     @media  screen and (min-width: 1000px) {
-        body, html{
-            width: 100%;
-            font-family: Montserrat;
-            margin: 0px;
-            padding: 0px;
-            } 
-        #menu-pc{
-            display: flex;
-            list-style-type: none;
-            align-items: center;
-            width: 550px;
-            justify-content: space-between;
-            padding: 0px 20px;
-            height: 100%;
-            }
-         #navigation{
-            display: flex;
-            justify-content: end;
-            top: 0;    
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            height: 80px;
-            }
-
-        #center-logo-pc{
-            display: flex !important;
-            top: 0;
-            height: 80px;
-        a{
-            width: 400px;
-            height: 80px;
-            z-index: 10;
-        }
-        }
-        #logo-pc{
-            width: 400px;              
-            object-fit: cover;
-            height: 80px;
-            position: absolute;
-        }   
-        
-        #logo-mobile, #center-logo-mobile{
-            display: none;
-            }               
-        ul #menu-mobile{
-            display: none;
-            }            
-        #menu-mobile-ikona{
-            display: none;
-        }
-        #menu-mobile-button-container{
-            display: none;              
-        } 
-        #center-menu-mobile{
-            display: none !important;
-        }
-        #domy-footer{
-            display: block;
-            position: fixed;
-            bottom: 0px;
-            height: auto;
-            width: 100vw;
-            z-index: -10;
-        }
-        #logo-footer-container{
-            display: flex;
-            position: absolute;
-            width: 200px;
-            justify-content: center;
-            align-items: center;
-            z-index: 11;
-            margin-top: 60px;
-        }
-        .logo-footer{
-            width: 100%;
-         }
-         #navigace-footer-container {
-            display: flex;
-            position: absolute;
-            z-index: 3;
-            margin-left: 200px;
-            line-height: 40px;
-            margin-top: 60px;
-            
-         }
-         footer#footer{
-            display: flex;
-            align-items: flex-end;
-            flex-direction: column;
-            position: relative;
-            z-index: 2;
-            width: 100%;
-            background-color: #555;
-            background-color: rgba(50, 50, 50, 0.833);
-            height: 499px;
-            color: aliceblue;
-        }
-        
-         #poptavkovy-formular-footer{
-          display: flex;
-          position: absolute;
-          z-index: 3;
-          right: 30px;
-          bottom: 1;
-          margin-top: 32px;
-          background-color: rgba(6,6,68, 0.9);
-          color: #fff;
-          height: 290px;
-          justify-content: center;
-          align-items: center;
-          width: 470px;
-          padding-bottom: 5px;
-          border-radius: 4px;
-        } 
-
-        #poptavkovy-formular-top{
-            display: flex;
-            position: absolute;
-            z-index: 3;
-            right: 30px;
-            top: 150px;
-            background-color: rgba(6,6,68, 0.9);
-            color: #fff;
-            height: 290px;
-            justify-content: center;
-            align-items: center;
-            width: 470px;
-            padding-bottom: 5px;
-            border-radius: 4px;
-        }
-    
-        #nadpis-main{
-            display: flex;
-            position: absolute;
-            top: 72px;
-            color: #000;
-            font-size: 40px;
-            margin-left: 17px;
-            text-decoration-line: overline;
-            background-color: #ffffff6a;
-            padding: 30px 30px 15px 30px;
-        }
-
-        #justifyContent{
-            display: none;
-        }
-        
-        }
-        /* Konec - responzivita pro PC */   
-
-       
-    
-    
-        /* Responzivita pro Telefon */
-        @media screen and (max-width: 1200px){
-            #navigace-footer-container {
-                flex-direction: column;
-                margin-top: 0px;
-            }
-        }
-
-        @media screen and (max-width: 999px) {     
-            body, html{
-                width: 100%;
-                font-family: Montserrat;
-                margin: 0px;
-                padding: 0px;
-                }    
-
-                .parrentsHeight {
-                    justify-content: end;
-                }
-        #menu-mobile-button-container{
-            display: flex;
-            margin-top: -13px;
-            position: absolute; 
-            height: 30px;
-            width: 180px;
-            justify-content: center;
-        } 
-        #navigation{
-            display: flex;
-            justify-content: center;
-            top: 80px;
-            align-items: center;
-            position: fixed;
-            width: 100vw;
-            }
-            
-        #menu-mobile-button{
-            width: 180px;
-            color: white;
-            background-color: rgba(6,6,68, 0.9);
-            border: none;
-            font-size: 15px;
-            font-weight: bold;
-        } 
-        #menu-mobile-button:hover{
-        background-color: rgba(0,0,0, 0);
-        }
-        #center-menu-mobile{
-            display: flex;
-            width: 100vw;
-            justify-content: center;
-            margin-top: 16px;
-        }
-        #center-logo-mobile{
-            display: flex !important;
-            margin: 0;
-            padding: 0;
-            position: fixed;
-            width: 100vw;
-            justify-content: center;
-            top: 0;
-            height: 80px;
-        }
-        #logo-mobile{
-            width: 300px;              
-            object-fit: cover;
-            height: 80px;
-            position: absolute;
-        }
-        a{
-            z-index: 50;
-            width: 300px;
-            height: 80px;
-        } 
-        #menu-pc{
-            display: none;
-        }
-        #logo-pc{
-            display: none;
-        } 
-
-        #center-logo-pc{
-            display: none;
-        }
-        #menu-mobile{
-            display: none;
-            position: absolute;
-            width: 100vw;
-            margin-top: 20px;
-            background-color: rgba(6,6,68, 0.9);
-            flex-direction: column;
-            line-height: 35px;
-            list-style-type: none;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-        #domy-footer{
-            display: block;
-            position: fixed;
-            bottom: 0px;
-            height: 830px;
-            width: auto;
-            z-index: -10;
-        }
-        #center-logo-footer-container{
-            display: flex;
-            justify-content: center;
-        }
-        #logo-footer-container{
-            display: flex;
-            position: absolute;
-            width: 230px;
-            height: 230px;
-            margin-top: 0px; 
-        }
-        .logo-footer{
-            object-fit: cover;
-            display: flex;
-            width: 100%;
-            height: 100%;
-            z-index: 3;
-        }
-        #navigace-footer-container {
-            display: flex;
-            position: absolute;
-            z-index: 3;
-            line-height: 40px;
-            margin-top: 530px;
-            flex-direction: column;
-            
-         }        
-         footer#footer{
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            position: relative;
-            z-index: 2;
-            width: 100%;
-            background-color: #555;
-            background-color: rgba(50, 50, 50, 0.833);
-            height: 1100px;
-            color: aliceblue;
-            bottom: 0;
-        }
-        #poptavkovy-formular-footer{
-            display: flex;
-            position: absolute;
-            z-index: 3;
-            padding: 15px 10px;
-            margin-top: 190px;
-            background-color: rgba(6,6,68, 0.7);
-            color: #fff;
-            height: 290px;
-            justify-content: center;
-            align-items: center;
-            max-width: 100vw;
-            padding-bottom: 25px;
-          } 
-          #poptavkovy-formular-top{
-            display: none;
-          }
-
-          #justifyContent{
-            justify-content: center;
-            display: flex;
-            width: auto;
-            background-color: #ffffffa3;
-            position: absolute;
-            top: 125px;
-            position: absolute;
-            padding: 20px 30px 10px 30px;
-            margin-left: 10px;
-            
-            }
-        
-          #nadpis-main-mobile{
-            display: flex;
-            color: #000;
-            font-size: 30px;
-            text-decoration-line: overline;
-            margin: 0;
-            padding: 0;
-        }
-    
-        #nadpis-main{
-            display: none;
-        }
+  }
   
-        }    
-
-        @media screen and (max-width: 559px) {
-            
-        .parrentsHeight {
-            justify-content: center;
-        }
-        #justifyContent{
-        visibility: hidden;
-        }
-        }
-
-
-    /* Konec - responzivita pro Telefon */
-    
-    #footer-copyright-center{
-        display: flex;
-        position: absolute;
-        width: 100%;
-        left: 0;
-        bottom: 65px;
-        justify-content: center;        
+  /* Přidáno: omezení šířky pro fixmenu a contactBar */
+  #fixmenu, .contactBar {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    left: 0; /* Zajistí, že je zarovnáno na střed */
+    right: 0;
+    padding: 0 20px; /* přidáme padding pro estetiku */
+  }
+  
+  .socialsTopBar {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .containerLogo, .containerPodpis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+  }
+  
+  /* Přidáno: omezení šířky pro containerLogo a containerPodpis */
+  .containerLogo, .containerPodpis {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  .podpisEriHead,
+  .logoRemaxHead {
+    width: 160px;
+    height: auto;
+    z-index: 9;
+  }
+  
+  .podpisEriHead {
+    margin-left: 65%;
+  }
+  
+  #nadpis-main span {
+    font-size: 0.7em;
+  }
+  
+  /* Přidáno: omezení šířky pro navigation */
+  #navigation {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px; /* přidáme padding pro estetiku */
+    left: 0; /* Zajistí, že je zarovnáno na střed */
+    right: 0;
+  }
+  
+  /* Responzivita pro PC */
+  @media screen and (min-width: 1000px) {
+    body, html {
+      width: 100%;
+      font-family: Montserrat;
+      margin: 0px;
+      padding: 0px;
     }
-   
-    span#copyright{
-        display: flex;
-        position: absolute;
-        flex-direction: column;
-        color: aliceblue;
-        align-items: center;
+  
+    #menu-pc {
+      display: flex;
+      list-style-type: none;
+      align-items: center;
+      width: 550px;
+      justify-content: space-between;
+      padding: 0px 20px;
+      height: 100%;
     }
-   
-    #deriverge{
-        color: #fff;
-        margin-bottom: 5px;
-        height: auto;
-        width: auto;
+  
+    .contactBar {
+      display: flex;
+      position: fixed;
+      justify-content: space-between;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      background-color: #fff;
+      z-index: 99;
     }
- 
-
-    #logo-phone{
+  
+    .contactsTopBar,
+    .socialsTopBar,
+    .contactsTopBar li a,
+    .contactsTopBar li {
+      display: flex;
+      text-decoration: none;
+      padding: 0;
+    }
+  
+    .socialsTopBar li {
+      margin-left: 20px;
+      display: flex;
+    }
+  
+    #telContactBar::before {
+      background-image: url(/icons/tel-ico.svg);
+      background-size: 30px 30px;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      content: "";
+      margin-right: 7px;
+    }
+  
+    #mailContactBar::before {
+      background-image: url(/icons/mail-ico.svg);
+      background-size: 30px 30px;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      content: "";
+      margin-right: 7px;
+    }
+  
+    .contactBar a {
+      color: #000;
+      font-weight: 500;
+    }
+  
+    .socialsTopBar,
+    .contactsTopBar {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  
+    .contactsTopBar {
+      margin: 0;
+      padding: 0;
+    }
+  
+    .contactsTopBar li {
+      margin-right: 20px;
+      display: flex;
+      align-items: center;
+    }
+  
+    .borderContactBar {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      margin-left: 5%;
+    }
+  
+    .borderSocialsBar {
+      display: flex;
+      align-items: center;
+      margin-right: 5%;
+    }
+  
+    .socialsTopBar li {
+      text-decoration: none;
+    }
+  
+    #fbContactBar a {
+      background-image: url(/icons/fb-ico.svg);
+      background-size: 30px 30px;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      content: "";
+      margin-right: 7px;
+      background-repeat: no-repeat;
+    }
+  
+    #igContactBar a {
+      background-image: url(/icons/ig-ico.svg);
+      background-size: 30px 30px;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      content: "";
+      margin-right: 7px;
+      background-repeat: no-repeat;
+    }
+  
+    #navigation {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      height: 80px;
+    }
+  
+    #center-logo-pc {
+      display: flex !important;
+      top: 0;
+      height: 80px;
+    }
+  
+    #logo-pc {
+      width: 400px;
+      object-fit: cover;
+      height: 80px;
+      position: absolute;
+    }
+  
+    #logo-mobile,
+    #center-logo-mobile {
+      display: none;
+    }
+  
+    ul #menu-mobile {
+      display: none;
+    }
+  
+    #menu-mobile-ikona {
+      display: none;
+    }
+  
+    #menu-mobile-button-container {
+      display: none;
+    }
+  
+    #center-menu-mobile {
+      display: none !important;
+    }
+  
+    #domy-footer {
+      display: block;
+      position: fixed;
+      bottom: 0px;
+      height: auto;
+      width: 100%;
+      z-index: -10;
+      max-width: inherit;
+    }
+  
+    #logo-footer-container {
+      display: flex;
+      position: absolute;
+      width: 200px;
+      justify-content: center;
+      align-items: center;
+      z-index: 9;
+      margin-top: 60px;
+    }
+  
+    .logo-footer {
+      width: 100%;
+    }
+  
+    #navigace-footer-container {
+      display: flex;
+      position: absolute;
+      z-index: 3;
+      margin-left: 200px;
+      line-height: 40px;
+      margin-top: 60px;
+    }
+  
+    footer#footer {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      background-color: #555;
+      background-color: rgba(50, 50, 50, 0.833);
+      height: 499px;
+      color: aliceblue;
+    }
+  
+    #poptavkovy-formular-footer {
+      display: flex;
+      position: absolute;
+      z-index: 3;
+      right: 30px;
+      bottom: 1;
+      margin-top: 32px;
+      background-color: rgba(6, 6, 68, 0.9);
+      color: #fff;
+      height: 290px;
+      justify-content: center;
+      align-items: center;
+      width: 470px;
+      padding-bottom: 5px;
+      border-radius: 4px;
+    }
+  
+    #poptavkovy-formular-top {
+      display: flex;
+      position: absolute;
+      z-index: 3;
+      right: 30px;
+      top: 150px;
+      background-color: rgba(6, 6, 68, 0.9);
+      color: #fff;
+      height: 290px;
+      justify-content: center;
+      align-items: center;
+      width: 470px;
+      padding-bottom: 5px;
+      border-radius: 4px;
+    }
+  
+    #nadpis-main {
+      position: absolute;
+      top: 72px;
+      color: #000;
+      font-size: 40px;
+      margin-left: 17px;
+      background-color: #ffffff6a;
+      padding: 30px 30px 15px 30px;
+    }
+  
+    #justifyContent {
+      display: none;
+    }
+  }
+  
+  /* Konec - responzivita pro PC */
+  
+  /* Responzivita pro Telefon */
+  @media screen and (max-width: 1200px) {
+    #navigace-footer-container {
+      flex-direction: column;
+      margin-top: 0px;
+    }
+  }
+  
+  @media screen and (max-width: 999px) {
+    body, html {
+      width: 100%;
+      font-family: Montserrat;
+      margin: 0px;
+      padding: 0px;
+    }
+  
+    #fixmenu {
+      top: 0;
+    }
+  
+    .parrentsHeight {
+      justify-content: end;
+    }
+  
+    .contactBar {
+      display: none;
+    }
+  
+    #menu-mobile-button-container {
+      display: flex;
+      margin-top: -13px;
+      position: absolute;
+      height: 30px;
+      width: 180px;
+      justify-content: center;
+    }
+  
+    #navigation {
+      display: flex;
+      justify-content: center;
+      top: 80px;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+    }
+  
+    #menu-mobile-button {
+      width: 180px;
+      color: white;
+      background-color: rgba(6, 6, 68, 0.9);
+      border: none;
+      font-size: 15px;
+      font-weight: bold;
+    }
+  
+    #menu-mobile-button:hover {
+      background-color: rgba(0, 0, 0, 0);
+    }
+  
+    #center-menu-mobile {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin-top: 16px;
+    }
+  
+    #center-logo-mobile {
+      display: flex !important;
+      margin: 0;
+      padding: 0;
+      position: fixed;
+      width: 100%;
+      justify-content: center;
+      top: 0;
+      height: 80px;
+    }
+  
+    #logo-mobile {
+      width: 300px;
+      object-fit: cover;
+      height: 80px;
+      position: absolute;
+    }
+  
+    a {
+      z-index: 50;
+      width: 300px;
+      height: 80px;
+    }
+  
+    #menu-pc {
+      display: none;
+    }
+  
+    #logo-pc {
+      display: none;
+    }
+  
+    #center-logo-pc {
+      display: none;
+    }
+  
+    #menu-mobile {
+      display: none;
+      position: absolute;
+      width: 100%;
+      margin-top: 20px;
+      background-color: rgba(6, 6, 68, 0.9);
+      flex-direction: column;
+      line-height: 35px;
+      list-style-type: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  
+    #domy-footer {
+      display: block;
+      position: fixed;
+      bottom: 0px;
+      height: 830px;
+      width: auto;
+      z-index: -10;
+    }
+  
+    #center-logo-footer-container {
+      display: flex;
+      justify-content: center;
+    }
+  
+    #logo-footer-container {
+      display: flex;
+      position: absolute;
+      width: 230px;
+      height: 230px;
+      margin-top: 0px;
+    }
+  
+    .logo-footer {
+      object-fit: cover;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+    }
+  
+    #navigace-footer-container {
+      display: flex;
+      position: absolute;
+      z-index: 3;
+      line-height: 40px;
+      margin-top: 530px;
+      flex-direction: column;
+    }
+  
+    footer#footer {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      background-color: #555;
+      background-color: rgba(50, 50, 50, 0.833);
+      height: 1100px;
+      color: aliceblue;
+      bottom: 0;
+    }
+  
+    #poptavkovy-formular-footer {
+      display: flex;
+      position: absolute;
+      z-index: 3;
+      padding: 15px 10px;
+      margin-top: 190px;
+      background-color: rgba(6, 6, 68, 0.7);
+      color: #fff;
+      height: 290px;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      padding-bottom: 25px;
+    }
+  
+    #poptavkovy-formular-top {
+      display: none;
+    }
+  
+    #justifyContent {
+      justify-content: center;
+      display: flex;
+      width: auto;
+      background-color: #ffffffa3;
+      position: absolute;
+      top: 125px;
+      position: absolute;
+      padding: 20px 30px 10px 30px;
+      margin-left: 10px;
+    }
+  
+    #nadpis-main-mobile {
+      display: flex;
+      color: #000;
+      font-size: 30px;
+      margin: 0;
+      padding: 0;
+    }
+  
+    #nadpis-main {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 559px) {
+    .parrentsHeight {
+      justify-content: center;
+    }
+  
+    #justifyContent {
+      visibility: hidden;
+    }
+  }
+  
+  /* Konec - responzivita pro Telefon */
+  
+  #footer-copyright-center {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 65px;
+    justify-content: center;
+  }
+  
+  span#copyright {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    color: aliceblue;
+    align-items: center;
+  }
+  
+  #deriverge {
+    color: #fff;
+    margin-bottom: 5px;
+    height: auto;
+    width: auto;
+  }
+  
+  #logo-phone {
     width: 25px;
     position: absolute;
     padding-right: 10px;
     margin-top: px;
-    }
-
-    .odkazmenu a{
+  }
+  
+  .odkazmenu a {
     color: white;
     text-decoration: none;
     font-size: 20px;
-    }
-
-    .edit-text{
-        color: #fff;
-        font-size: 20px;
-    }
-
-    .odkazmenu a:hover{
-        outline: solid #fff 1px;
-        outline-offset: 5px;
-    }
-    
-
-    .phone-menu a{
-        color: white;
-        text-decoration: none;
-        font-size: 20px;   
-        margin-left: 35px;       
-    }
-
-    .phone-ikon img{
+  }
+  
+  .edit-text {
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .odkazmenu a:hover {
+    outline: solid #fff 1px;
+    outline-offset: 5px;
+  }
+  
+  .phone-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 35px;
+  }
+  
+  .phone-ikon img {
     margin-top: 8px;
-    }
-
-    .odstavec-container-full-width{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        background-color: #fff;
-    }
-
-    .odstavec-container{
-        background-color: inherit;
-        padding: 30px 0;
-        max-width: 1300px;
-    }
-
-    p{
-        padding: 0 20px 0 5px;
-        margin: 0;
-        display: flex;
-        letter-spacing: +1px;
-        line-height: +24px;
-        flex-wrap: nowrap;      
-        max-width: 100vw;
-        z-index: 3;
-        background-color: white;
-    }
-
+  }
   
-    .navigace-footer{
-        color: #fff;
-        font-size: 25px;
-        font-weight: 500;
-    }
-
-    .kontakty-footer{
-        color: #fff;
-        font-size: 25px;
-        font-weight: 500;
-      }
-
-    .kontakty-footer::after{
-        content: '';
-        display: flex;
-        position: relative;
-        margin: 0px;
-        height: 2px;
-        width: 90px;
-        background-color: #fff;
-    }
-
-    .navigace-footer::after{
-        content: '';
-        display: flex;
-        position: relative;
-        margin: 0px;
-        height: 2px;
-        width: 90px;
-        background-color: #fff;
-    }
-        
-    #kontakty-footer-ul{
-        list-style-type: none;        
-    }
-
-    #center-button-form{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
-
-    input, textarea, #button-formul{
-        touch-action: none;
-        pinch-zoom: none;
-    }
-
-    textarea{
-        height: 90px;
-        width: 100%;
-        overflow: scroll;
-        resize: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    input{
-        height: 35px;
-        width: 250px;
-        margin: 0;
-        padding: 0;
-    }
-
-    #nadpis-formular{
-        font-size: 20px;
-        line-height: 28px;
-    }
-    
-    #button-formular{
-        width: 100px;
-        height: 39px;
-        font-size: 20px;
-        padding: 0;
-        border-radius: 4px;
-        color: #000000;
-        background-color: #fff;
-        text-align: center;
-    }
+  .odstavec-container-full-width {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+  }
   
-    button#scrollTopButton{
-        width: 55px;
-        height: 55px; 
-        border-radius: 50%;
-        margin: 0;
-        border: none;
-        padding: 0;
-        display: flex;
-        position: fixed;
-        z-index: 999999;
-        right: 30px;
-        bottom: 30px;
-        justify-content: center;
-        background-color: rgba(6,6,68, 0.7);
-    }            
-
-    .scrollTopText{
-        color: #ffffff;
-        margin-top: 5px;
-        font-size: 60px;
-        font-family: 'Courier New', Courier, monospace;
-    }
-
-    #prvniOdstavec::before{
-        display: flex;
-        position: relative;
-        color: #000;
-        content: " '' ";
-        font-size: 100px;
-        font-family: "Montagu Slab", serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        letter-spacing: -5px;
-    }
-
-    #menu-footer{
-        list-style-type: none;
-    }
+  .odstavec-container {
+    background-color: inherit;
+    padding: 30px 0;
+    max-width: 1300px;
+  }
+  
+  p {
+    padding: 0 20px 0 5px;
+    margin: 0;
+    display: flex;
+    letter-spacing: +1px;
+    line-height: +24px;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    z-index: 3;
+    background-color: white;
+  }
+  
+  .navigace-footer {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  
+  .kontakty-footer {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  
+  .kontakty-footer::after {
+    content: '';
+    display: flex;
+    position: relative;
+    margin: 0px;
+    height: 2px;
+    width: 90px;
+    background-color: #fff;
+  }
+  
+  .navigace-footer::after {
+    content: '';
+    display: flex;
+    position: relative;
+    margin: 0px;
+    height: 2px;
+    width: 90px;
+    background-color: #fff;
+  }
+  
+  #kontakty-footer-ul {
+    list-style-type: none;
+  }
+  
+  #center-button-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  
+  input, textarea, #button-formul {
+    touch-action: none;
+    pinch-zoom: none;
+  }
+  
+  textarea {
+    height: 90px;
+    width: 100%;
+    overflow: scroll;
+    resize: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  input {
+    height: 35px;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #nadpis-formular {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  
+  #button-formular {
+    width: 100px;
+    height: 39px;
+    font-size: 20px;
+    padding: 0;
+    border-radius: 4px;
+    color: #000000;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  button#scrollTopButton {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin: 0;
+    border: none;
+    padding: 0;
+    display: flex;
+    position: fixed;
+    z-index: 999999;
+    right: 30px;
+    bottom: 30px;
+    justify-content: center;
+    background-color: rgba(6, 6, 68, 0.7);
+  }
+  
+  .scrollTopText {
+    color: #ffffff;
+    margin-top: 5px;
+    font-size: 60px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  #prvniOdstavec::before {
+    display: flex;
+    position: relative;
+    color: #000;
+    content: " '' ";
+    font-size: 100px;
+    font-family: "Montagu Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -5px;
+  }
+  
+  #menu-footer {
+    list-style-type: none;
+  }
+  
