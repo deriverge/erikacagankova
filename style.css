@@ -120,6 +120,7 @@
   
   .podpisEriHead {
     margin-left: 65%;
+    margin-top: 14px;
   }
   
   #nadpis-main span {
@@ -623,7 +624,7 @@
     }
     .podpisEriHead{
         margin-top: -610px;
-        margin-right: 439px;
+        margin-right: 463px;
     }
   }
   
