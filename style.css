@@ -834,3 +834,7 @@
     list-style-type: none;
   }
   
+.containerLogo {
+    justify-content: flex-start;
+    margin-left: 20px;
+}
