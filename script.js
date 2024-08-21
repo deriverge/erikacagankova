@@ -133,20 +133,32 @@ window.addEventListener("scroll", function() {
 //konec schovani menu mobile
 
 $(document).ready(function() {
-    var previousScroll = 0;
+    function handleScrollEffect() {
+        if ($(window).width() >= 1000) {
+            var previousScroll = 0;
 
-    $(window).on('scroll', function() {
-        var currentScroll = $(this).scrollTop();
+            $(window).on('scroll', function() {
+                var currentScroll = $(this).scrollTop();
 
-        if (currentScroll > previousScroll) {
-            // Posouváme dolů - skryjeme menu
-            $('#fixmenu').css('top', '-100px'); // Skrýt menu posunutím nahoru
+                if (currentScroll > previousScroll) {
+                    // Posouváme dolů - skryjeme menu
+                    $('#fixmenu').css('top', '-100px'); // Skrýt menu posunutím nahoru
+                } else {
+                    // Posouváme nahoru - zobrazíme menu
+                    $('#fixmenu').css('top', '28px'); // Zobrazit menu vrácením do původní polohy
+                }
+
+                previousScroll = currentScroll;
+            });
         } else {
-            // Posouváme nahoru - zobrazíme menu
-            $('#fixmenu').css('top', '28px'); // Zobrazit menu vrácením do původní polohy
+            $(window).off('scroll'); // Odstraní efekt scrollování na menších zařízeních
         }
+    }
 
-        previousScroll = currentScroll;
+    handleScrollEffect(); // Spustí efekt při načtení stránky
+
+    $(window).on('resize', function() {
+        handleScrollEffect(); // Spustí efekt při změně velikosti okna
     });
 });
 
