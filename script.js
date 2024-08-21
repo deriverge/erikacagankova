@@ -131,3 +131,22 @@ window.addEventListener("scroll", function() {
 }, false);
 
 //konec schovani menu mobile
+
+$(document).ready(function() {
+    var previousScroll = 0;
+
+    $(window).on('scroll', function() {
+        var currentScroll = $(this).scrollTop();
+
+        if (currentScroll > previousScroll) {
+            // Posouváme dolů - skryjeme menu
+            $('#fixmenu').css('top', '-100px'); // Skrýt menu posunutím nahoru
+        } else {
+            // Posouváme nahoru - zobrazíme menu
+            $('#fixmenu').css('top', '28px'); // Zobrazit menu vrácením do původní polohy
+        }
+
+        previousScroll = currentScroll;
+    });
+});
+
