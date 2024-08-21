@@ -74,7 +74,6 @@
     background-color: rgba(6, 6, 68, 0.9);
     height: 80px;
     position: fixed;
-    
     left: 0;
     z-index: 10;
     transition: top 0.5s ease;
@@ -84,6 +83,7 @@
   #fixmenu, .contactBar {
     max-width: 1440px;
     width: 100%;
+    top: 28px;
     margin: 0 auto;
     left: 0; /* Zajistí, že je zarovnáno na střed */
     right: 0;
@@ -145,6 +145,10 @@
       font-family: Montserrat;
       margin: 0px;
       padding: 0px;
+    }
+
+    #fixmenu {
+      top: 28px;
     }
   
     #menu-pc {
