@@ -140,12 +140,17 @@ $(document).ready(function() {
             $(window).on('scroll', function() {
                 var currentScroll = $(this).scrollTop();
 
-                if (currentScroll > previousScroll) {
-                    // Posouváme dolů - skryjeme menu
-                    $('#fixmenu').css('top', '-100px'); // Skrýt menu posunutím nahoru
+                if (currentScroll > 80) { // Zkontroluje, zda uživatel sjel alespoň 80px
+                    if (currentScroll > previousScroll) {
+                        // Posouváme dolů - skryjeme menu
+                        $('#fixmenu').css('top', '-100px'); // Skrýt menu posunutím nahoru
+                    } else {
+                        // Posouváme nahoru - zobrazíme menu
+                        $('#fixmenu').css('top', '28px'); // Zobrazit menu vrácením do původní polohy
+                    }
                 } else {
-                    // Posouváme nahoru - zobrazíme menu
-                    $('#fixmenu').css('top', '28px'); // Zobrazit menu vrácením do původní polohy
+                    // Pokud je pozice posunu menší než 80px, menu zůstává viditelné
+                    $('#fixmenu').css('top', '28px'); // Vrátit menu na výchozí pozici
                 }
 
                 previousScroll = currentScroll;
@@ -161,4 +166,3 @@ $(document).ready(function() {
         handleScrollEffect(); // Spustí efekt při změně velikosti okna
     });
 });
-
